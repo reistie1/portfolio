@@ -1,38 +1,111 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Staatliches', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .App {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right, #538cc6, #9595b7);
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+header {
+  float: right;
+  padding: 0 1.5rem;
+}
+
+header a
+{
+  padding-right: 0.7rem;
+}
+
+header a:hover
+{
+  cursor: pointer;
+  color: #cce6ff;
+}
+
+.picture-frame
+{
+  width: 100%;
+  height: 400px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.picture
+{
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin:  0 auto;
+  border: 2px solid gray;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.person-name-section
+{
+  padding: 0.25rem 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.person-name
+{
+  width: 100%;
+  font-size: 60px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.person-name:hover
+{
+  width: 100%;
+  animation-name: name;
+  animation-duration: 5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes name {
+  0% {font-size: 60px;}
+  100% {font-size: 70px;}
+}
+
+.language-wrapper
+{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  padding: 1rem;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.language-item
+{
+  background-color: white;
+  width: 10%;
+  margin: 1rem;
+  text-align: center;
+  border-radius: 50%;
+  animation: languageItem 7s;
+  animation-delay: 2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.language-item h3
+{
+  line-height: 125px;
+  text-align: center;
 }
+
+@keyframes languageItem {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
